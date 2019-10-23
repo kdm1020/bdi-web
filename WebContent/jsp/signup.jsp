@@ -13,7 +13,8 @@
 		Name:<input type="text"name="name"><br>
 		Age:<input type="number"name="age"><br>
 		etc:<textarea name = "etc"></textarea> <br>
-		<button>Signup</button>
+		<button>Signup</button><br>
+		
 	</form>
 	
 	<!--

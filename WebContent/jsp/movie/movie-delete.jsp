@@ -18,17 +18,20 @@
 		Statement stmt = con.createStatement();
 		String sql;
 		String str = request.getParameter("mi_num");
-		sql = " delete from movie_info where mi_num = '" + str + "' ";
+		sql = " delete from movie_info where mi_num = " + str;
 		
 		out.println(sql);
 		
 		int result = stmt.executeUpdate(sql);
 		if(result==1){
-			out.println("정상적으로 영화 정보가 등록되었습니다.");
+			out.println("정상적으로 영화 정보가 삭제되었습니다.");
 		}else{
 			out.println("이유는 모르겠지만 잘 못 등록되었습니다.");
 		}
 		con.commit();
 	%>
+	<br>
+	<a href="/bdi-web/jsp/movie/movie-list.jsp"><button>리스트로 돌아가기</button></a>
+	
 </body>
 </html>
