@@ -30,9 +30,10 @@ sql +=" set ui_id=?,";
 sql +=" ui_pwd=?,";
 sql +=" ui_name=?,";
 sql +=" ui_age=?,";
-sql +=" ui_etc=?";
+sql +=" ui_etc=?,";
 sql +=" hobby=?";
 sql +=" where ui_num=? ";
+
 
 Connection con = DBCon.getCon();
 PreparedStatement ps = con.prepareStatement(sql);
@@ -52,10 +53,8 @@ if(result==1){
 }else{
 	out.println("회원수정이 정삭적으로 처리되지 않았습니다.");
 }
+out.println(sql);
 %>
 <a href="/bdi-web/jsp/user/user_list.jsp"><button>회원리스트로 돌아가기</button></a>
-
-
-</form>
 </body>
 </html>

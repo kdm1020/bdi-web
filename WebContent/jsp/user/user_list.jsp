@@ -32,7 +32,6 @@
 		<%
 			String search = request.getParameter("search");
 			String searchStr = request.getParameter("searchStr");
-			String uiId = request.getParameter("ui_id");
 			String sql = "select * from bdi.user_info ";
 			
 			if (search != null) {
@@ -45,6 +44,7 @@
 				}
 			}
 			sql += " order by ui_num desc ";
+			
 			Connection con = DBCon.getCon();
 			PreparedStatement ps = con.prepareStatement(sql);
 			if (search != null) {
